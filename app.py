@@ -9,7 +9,7 @@ from sklearn.metrics import mean_squared_error
 
 # Load the model
 try:
-    model = load_model('C:/Users/korup/OneDrive/Desktop/Stock/Stock Predictions Model.keras')
+    model = load_model('Stock Predictions Model.keras')
 except Exception as e:
     st.error(f"Error loading model: {e}")
 
