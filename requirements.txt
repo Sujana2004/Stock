@@ -1,0 +1,10 @@
+numpy==1.24.3
+pandas==2.1.4
+yfinance==0.2.33
+keras==2.15.0
+tensorflow==2.15.0
+streamlit==1.29.0
+plotly==5.18.0
+scikit-learn==1.4.0
+matplotlib==3.8.2
+seaborn==0.13.1
