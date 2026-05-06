@@ -21,12 +21,31 @@ start = st.date_input('Start Date', pd.to_datetime('2012-01-01'))
 end = st.date_input('End Date', pd.to_datetime('2023-12-31'))
 
 # Fetch stock data
+# Fetch stock data
 try:
     data = yf.download(stock, start=start, end=end)
+    
+    # Check if data is empty
+    if data.empty:
+        st.error(f"No data found for {stock} between {start} and {end}. Please check the stock symbol and date range.")
+        st.stop()
+    
+    # Check if 'Close' column exists
+    if 'Close' not in data.columns:
+        st.error(f"'Close' price data not available for {stock}")
+        st.stop()
+    
     st.subheader('Stock Data')
     st.write(data)
+    
 except Exception as e:
     st.error(f"Error fetching data for {stock}: {e}")
+    st.stop()
+
+# Only proceed if we have valid data
+if len(data) < 100:
+    st.error(f"Not enough data. Only {len(data)} rows found. Need at least 100 rows.")
+    st.stop()
 
 # Prepare training and testing datasets
 data_train = pd.DataFrame(data.Close[0:int(len(data) * 0.80)])
