@@ -168,7 +168,3 @@ The tests need no network access. GitHub Actions runs them on every push.
   a typical stock). The thresholds are constants at the top of `stock_utils.py`.
 - **Trade planning** uses daily closing prices and ignores brokerage, taxes and price gaps.
 
-## License
-
-No license file is included yet. Add one (MIT is a common choice) before publishing if you
-want others to be able to reuse the code.
