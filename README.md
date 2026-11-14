@@ -1,5 +1,7 @@
 # Stock Market Predictor
 
+**Live app:** https://stocks-price-prediction-academy-project.streamlit.app/
+
 A Streamlit app that downloads live daily prices from Yahoo Finance, forecasts the next
 1–100 trading days with an LSTM as a range, lets you test a trade idea against thousands of
 simulated futures, and shows its own track record for the stock you choose.
