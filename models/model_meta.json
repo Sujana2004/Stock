@@ -1,0 +1,44 @@
+{
+  "lookback": 100,
+  "horizon": 100,
+  "n_features": 6,
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "median_shrink": 0.5,
+  "band_scale": 0.98,
+  "ensemble_members": 3,
+  "trained_on": [
+    "GOOG",
+    "AAPL",
+    "MSFT",
+    "AMZN",
+    "TSLA",
+    "NVDA",
+    "INTC",
+    "HDB",
+    "JPM",
+    "XOM",
+    "WMT",
+    "KO",
+    "BA",
+    "PFE",
+    "DIS",
+    "CAT",
+    "TCS.NS",
+    "BAJAJFINSV.NS",
+    "RELIANCE.NS",
+    "INFY.NS",
+    "HDFCBANK.NS",
+    "ITC.NS",
+    "SBIN.NS",
+    "LT.NS"
+  ],
+  "data_until": "2026-11-13",
+  "split": {
+    "train": 0.7,
+    "validation_until": 0.8
+  }
+}
